@@ -35,7 +35,7 @@ err = zeros(length(n),length(lambda));
 for i1 = 1:length(n)
     lower(i1,:) = epsilon.*(2/pi*log(n(i1)) + 5/4);
     k = 1:n(i1);
-    upper(i1,:) = epsilon.*(2/pi*log(n(i1)) + 7/4);
+    upper(i1,:) = epsilon.*(2/pi*log(n(i1)) + 5/4 + 1/(2*n(i1)));
 end%if 
 
 %% Reconstruction error
